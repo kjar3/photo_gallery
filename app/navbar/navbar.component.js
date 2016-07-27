@@ -23,8 +23,8 @@ var NavBarComponent = (function () {
             selector: 'gallery-nav',
             providers: [gallery_service_1.GalleryService],
             directives: [tabs_1.TAB_DIRECTIVES, common_1.CORE_DIRECTIVES, gallery_component_1.CSSGalleryComponent],
-            template: "\n        <tabset justified=true>\n        <tab *ngFor=\"let gallery of galleries\" [heading]=\"gallery.name\"> \n          \n          <div class=\"wrapper\">\n            <css-carousel [galleryId]=\"gallery.id\"></css-carousel>\n          </div>\n        </tab>\n        </tabset>\n     \n  \t\t\t",
-            styles: ["\n  .wrapper {\n    background: black;\n    border-style: solid;\n    border-color: black;\n    border-width: 60px 60px 60px 60px;\n  }\n  "]
+            template: "\n    <div class=\"nav-wrapper\">\n      <tabset justified=true>\n        <tab *ngFor=\"let gallery of galleries\" [heading]=\"gallery.name\"> \n          <div class=\"gallery-wrapper\">\n            <css-carousel [galleryId]=\"gallery.id\"></css-carousel>\n          </div>\n        </tab>\n      </tabset>\n    </div>\n\t\t",
+            styles: ["\n    .nav-wrapper {\n      margin-top: 10px\n    }\n\n    .gallery-wrapper {\n      background: black;\n      border-style: solid;\n      border-color: black;\n      border-width: 60px 60px 60px 60px;\n    }\n\n\n  "]
         }), 
         __metadata('design:paramtypes', [gallery_service_1.GalleryService])
     ], NavBarComponent);

@@ -27,13 +27,13 @@ var CSSGalleryComponent = (function () {
     ], CSSGalleryComponent.prototype, "galleryId", void 0);
     CSSGalleryComponent = __decorate([
         core_1.Component({
-            //Name of our tag
+            moduleId: module.id,
             selector: 'css-carousel',
             providers: [gallery_image_service_1.GalleryImageService],
-            //Template for the tag
-            template: "\n <div class=\"carousel\">\n\n  <ul class=\"slides\">\n\n    <li *ngFor=\"let image of images\">\n      \n      <img src=\"{{image.url}}\" alt=\"\">\n    </li>\n\n   \n  </ul>\n\n</div>\n  ",
-            //Styles for the tag
-            styles: ["\n.carousel{\n    overflow:hidden;\n    width:100%;\n}\n.slides{\n    list-style:none;\n    position:relative;\n    width:500%; /* Number of panes * 100% */\n    overflow:hidden; /* Clear floats */\n        /* Slide effect Animations*/\n    -moz-animation:carousel 30s infinite;\n    -webkit-animation:carousel 30s infinite;\n    animation:carousel 30s infinite;\n}\n.slides > li{\n    position:relative;\n    float:left;\n    width: 20%; /* 100 / number of panes */\n}\n.carousel img{\n    display:block;\n    width:100%;\n    max-width:100%;\n}\n\n\n@keyframes carousel{\n    0%    { left:-1%; }\n    11%   { left:-1%; }\n    12.5% { left:-101%; }\n    23.5% { left:-101%; }\n    25%   { left:-205%; }\n    36%   { left:-205%; }\n    37.5% { left:-305%; }\n    48.5% { left:-305%; }\n    50%   { left:-405%; }\n    61%   { left:-405%; }\n    62.5% { left:-305%; }\n    73.5% { left:-305%; }\n    75%   { left:-205%; }\n    86%   { left:-205%; }\n    87.5% { left:-105%; }\n    98.5% { left:-105%; }\n    100%  { left:-5%; }\n}\n  "],
+            template: "\n\t\t<div class=\"carousel\">\n\t\t  <ul class=\"slides\">\n\t\t    <li *ngFor=\"let image of images\">\n\t\t     \t<img src=\"{{image.url}}\" alt=\"\">\n\t\t    </li>\n\t\t  </ul>\n\t\t</div>\n\t  ",
+            //todo use styleUrls  
+            //styleUrls: ['gallery.component.css']
+            styles: ["\n\t\t:host(.active) {\n\t\t\tbackground: black;\n\t\t}\n\n\t\t.carousel{\n\t\t    overflow:hidden;\n\t\t    width:100%;\n\t\t}\n\t\t.slides{\n\t\t    list-style:none;\n\t\t    position:relative;\n\t\t    width:500%; /* Number of panes * 100% */\n\t\t    overflow:hidden; /* Clear floats */\n\t\t        /* Slide effect Animations*/\n\t\t    -moz-animation:carousel 30s infinite;\n\t\t    -webkit-animation:carousel 30s infinite;\n\t\t    animation:carousel 30s infinite;\n\t\t}\n\t\t.slides > li{\n\t\t    position:relative;\n\t\t    float:left;\n\t\t    width: 20%; /* 100 / number of panes */\n\t\t}\n\t\t.carousel img{\n\t\t    display:block;\n\t\t    width:100%;\n\t\t    max-width:100%;\n\t\t}\n\n\t\t@keyframes carousel{\n\t\t    0%    { left:-1%; }\n\t\t    11%   { left:-1%; }\n\t\t    12.5% { left:-101%; }\n\t\t    23.5% { left:-101%; }\n\t\t    25%   { left:-205%; }\n\t\t    36%   { left:-205%; }\n\t\t    37.5% { left:-305%; }\n\t\t    48.5% { left:-305%; }\n\t\t    50%   { left:-405%; }\n\t\t    61%   { left:-405%; }\n\t\t    62.5% { left:-305%; }\n\t\t    73.5% { left:-305%; }\n\t\t    75%   { left:-205%; }\n\t\t    86%   { left:-205%; }\n\t\t    87.5% { left:-105%; }\n\t\t    98.5% { left:-105%; }\n\t\t    100%  { left:-5%; }\n\t\t}\n\t"],
         }), 
         __metadata('design:paramtypes', [gallery_image_service_1.GalleryImageService])
     ], CSSGalleryComponent);

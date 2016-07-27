@@ -10,23 +10,30 @@ import { CSSGalleryComponent } from '../gallery/gallery.component'
   providers: [GalleryService],
   directives: [TAB_DIRECTIVES, CORE_DIRECTIVES, CSSGalleryComponent],
   template: `
-        <tabset justified=true>
+    <div class="nav-wrapper">
+      <tabset justified=true>
         <tab *ngFor="let gallery of galleries" [heading]="gallery.name"> 
-          
-          <div class="wrapper">
+          <div class="gallery-wrapper">
             <css-carousel [galleryId]="gallery.id"></css-carousel>
           </div>
         </tab>
-        </tabset>
-     
-  			`,
-  styles: [ `
-  .wrapper {
-    background: black;
-    border-style: solid;
-    border-color: black;
-    border-width: 60px 60px 60px 60px;
-  }
+      </tabset>
+    </div>
+		`,
+  styles: [`
+    .nav-wrapper {
+      background: lightgrey;
+      margin-top: 10px
+    }
+
+    .gallery-wrapper {
+      background: black;
+      border-style: solid;
+      border-color: black;
+      border-width: 60px 60px 60px 60px;
+    }
+
+
   `]
 
 })
