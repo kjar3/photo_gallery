@@ -17,7 +17,6 @@ var GalleryComponent = (function () {
         this.galleryService = galleryService;
         this.myInterval = 1000;
         this.noWrapSlides = false;
-        this.slides = [];
     }
     GalleryComponent.prototype.getImages = function (galleryId) {
         this.images = this.galleryService.getImages(galleryId);
