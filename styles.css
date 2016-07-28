@@ -1,10 +1,11 @@
 
 .nav-link {
-	font-size: 16px;
+	font-size: 15px;
 }
 
 .nav-tabs>li>a {
 	border: 1px solid white !important;
+	background: darkgrey !important;
 }
 
 .nav-tabs>.active>a {
