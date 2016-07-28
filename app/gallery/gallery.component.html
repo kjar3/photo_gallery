@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-9">
     <carousel [interval]="defaultInterval" [noWrap]="noWrapSlides">
       <slide *ngFor="let image of images; let index=index"
              [active]="image.active">
@@ -14,7 +14,7 @@
     </carousel>
   </div>
  
-  <div class="col-md-6">
+  <div class="col-md-3">
     <br>
     <div class="checkbox">
       <label>
@@ -23,11 +23,11 @@
       </label>
     </div>
     
-    <div class="col-md-6">
+   
     Interval, in milliseconds: 
       <input type="number" class="form-control" [(ngModel)]="defaultInterval">
       <input type="range" [(ngModel)]="defaultInterval" min="0" max="5000">
     <br/>Enter a negative number or 0 to stop the interval.
-    </div>
+  
   </div>
 </div>

@@ -22,15 +22,15 @@ import { GalleryComponent } from '../gallery/gallery.component'
 		`,
   styles: [`
     .nav-wrapper {
-      background: lightgrey;
-      margin-top: 10px
+      background: #e0e2e4;
+      padding-top: 20px
     }
 
     .gallery-wrapper {
       background: black;
       border-style: solid;
       border-color: black;
-      border-width: 60px 60px 60px 60px;
+      border-width: 50px 50px 50px 50px;
     }
 
 
