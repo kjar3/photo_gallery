@@ -12,9 +12,8 @@
 }
 
 
-.nav-tabs.nav-justified>li>a {
-	border-bottom-color: white !important;
-	border-bottom-width: 1px !important;
+.nav-tabs>li>a {
+	border: 1px solid white !important;
 }
 
 .nav-tabs.nav-justified>.active>a {
