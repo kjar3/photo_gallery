@@ -32,7 +32,7 @@ var GalleryComponent = (function () {
             selector: 'gallery',
             providers: [gallery_image_service_1.GalleryImageService],
             directives: [galleria_1.Galleria],
-            template: "\n  \t<p-galleria [images]=\"images\" panelWidth=\"400\" panelHeight=\"300\" showCaption=\"true\"></p-galleria>\n  \t",
+            template: "\n  \t<p-galleria [images]=\"images\" panelWidth=\"400\" panelHeight=\"300\" showCaption=\"false\"></p-galleria>\n  \t",
         }), 
         __metadata('design:paramtypes', [gallery_image_service_1.GalleryImageService])
     ], GalleryComponent);

@@ -11,7 +11,7 @@ import { Galleria } from 'primeng/components/galleria/galleria';
   	providers: [GalleryImageService],
   	directives: [Galleria],
   	template: `
-  	<p-galleria [images]="images" panelWidth="400" panelHeight="300" showCaption="true"></p-galleria>
+  	<p-galleria [images]="images" panelWidth="400" panelHeight="300" showCaption="false"></p-galleria>
   	`,
 
 })
