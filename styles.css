@@ -1,23 +1,14 @@
-
 .nav-link {
-	font-size: 16px;
+	font-size: 15px;
 }
 
-.nav-link.active {
-	color: lightgray !important;
-}
-
-.nav-tabs>li.active>a {
-	background: black !important;
-}
-
-
-.nav-tabs.nav-justified>li>a {
-	border-bottom-color: white !important;
-	border-bottom-width: 1px !important;
-}
-
-.nav-tabs.nav-justified>.active>a {
+.nav-tabs>li>a {
 	border: 1px solid white !important;
+	background: darkgrey !important;
+}
+
+.nav-tabs>.active>a {
+	color: lightgray !important;
 	border-bottom-color: black !important;
+	background: black !important;
 }

@@ -47,23 +47,23 @@ import { GalleryImageService, Image } from './services/gallery-image.service'
 		}
 
 		@keyframes carousel{
-		    0%    { left:-1%; }
-		    11%   { left:-1%; }
-		    12.5% { left:-101%; }
-		    23.5% { left:-101%; }
-		    25%   { left:-205%; }
-		    36%   { left:-205%; }
-		    37.5% { left:-305%; }
-		    48.5% { left:-305%; }
-		    50%   { left:-405%; }
-		    61%   { left:-405%; }
-		    62.5% { left:-305%; }
-		    73.5% { left:-305%; }
-		    75%   { left:-205%; }
-		    86%   { left:-205%; }
-		    87.5% { left:-105%; }
-		    98.5% { left:-105%; }
-		    100%  { left:-5%; }
+		    0%    { left:0%; }
+		    11%   { left:0%; }
+		    12.5% { left:-100%; }
+		    23.5% { left:-100%; }
+		    25%   { left:-200%; }
+		    36%   { left:-200%; }
+		    37.5% { left:-300%; }
+		    48.5% { left:-300%; }
+		    50%   { left:-400%; }
+		    61%   { left:-400%; }
+		    62.5% { left:-300%; }
+		    73.5% { left:-300%; }
+		    75%   { left:-200%; }
+		    86%   { left:-200%; }
+		    87.5% { left:-100%; }
+		    98.5% { left:-100%; }
+		    100%  { left:0%; }
 		}
 	`],
 })

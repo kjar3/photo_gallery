@@ -34,11 +34,11 @@ var GalleryImageService = (function () {
                 { "title": "C5", "url": "gallery_images/C5.jpg" }
             ],
             4: [
-                { "title": "D1", "url": "gallery_images/D1.jpg" },
-                { "title": "D2", "url": "gallery_images/D2.jpg" },
-                { "title": "D3", "url": "gallery_images/D3.jpg" },
-                { "title": "A4", "url": "gallery_images/D4.jpg" },
-                { "title": "D5", "url": "gallery_images/D5.jpg" }
+                { "title": "First Cat", "url": "http://placekitten.com/400/300" },
+                { "title": "D2", "url": "http://placekitten.com/400/302" },
+                { "title": "D3", "url": "http://placekitten.com/400/303" },
+                { "title": "A4", "url": "http://placekitten.com/400/304" },
+                { "title": "D5", "url": "http://placekitten.com/400/305" }
             ]
         };
     }
