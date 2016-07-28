@@ -1,0 +1,8 @@
+
+
+### mac os stuff
+.DS_Store
+
+### Directories
+node_modules/
+
