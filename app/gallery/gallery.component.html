@@ -22,8 +22,12 @@
         Disable Slide Looping
       </label>
     </div>
- 
-    Interval, in milliseconds: <input type="number" class="form-control" [(ngModel)]="defaultInterval">
+    
+    <div class="col-md-6">
+    Interval, in milliseconds: 
+      <input type="number" class="form-control" [(ngModel)]="defaultInterval">
+      <input type="range" [(ngModel)]="defaultInterval" min="0" max="5000">
     <br/>Enter a negative number or 0 to stop the interval.
+    </div>
   </div>
 </div>
