@@ -14,7 +14,7 @@ import { GalleryImageService, Image } from './services/gallery-image.service'
 export class GalleryComponent {
 	@Input() galleryId: number;
 	images: Image[];
- 	myInterval:number = 1000;
+ 	defaultInterval:number = 2000;
   	noWrapSlides:boolean = false;
  
   constructor(private galleryService: GalleryImageService) { }

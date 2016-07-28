@@ -15,7 +15,7 @@ export class GalleryService {
 		{id: 1, name: 'Gallery A'},
 		{id: 2, name: 'Gallery B'},
 		{id: 3, name: 'Gallery C'},
-		{id: 4, name: 'Gallery D'}
+		{id: 4, name: 'Cat Gallery'}
 		];
 	}
 
