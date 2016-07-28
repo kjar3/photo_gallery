@@ -2,19 +2,19 @@ import { Component } from '@angular/core';
 import { CORE_DIRECTIVES } from '@angular/common';
 import { TAB_DIRECTIVES } from 'ng2-bootstrap/components/tabs';
 import { GalleryService, Gallery } from '../gallery/services/gallery.service'
-import { CSSGalleryComponent } from '../gallery/gallery.component'
+import { GalleryComponent } from '../gallery/gallery.component'
 
 
 @Component({
   selector: 'gallery-nav',
   providers: [GalleryService],
-  directives: [TAB_DIRECTIVES, CORE_DIRECTIVES, CSSGalleryComponent],
+  directives: [TAB_DIRECTIVES, CORE_DIRECTIVES, GalleryComponent],
   template: `
     <div class="nav-wrapper">
       <tabset justified=true>
         <tab *ngFor="let gallery of galleries" [heading]="gallery.name"> 
           <div class="gallery-wrapper">
-            <css-carousel [galleryId]="gallery.id"></css-carousel>
+            <gallery [galleryId]="gallery.id"></gallery>
           </div>
         </tab>
       </tabset>

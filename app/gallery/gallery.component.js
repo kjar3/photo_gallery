@@ -10,34 +10,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var gallery_image_service_1 = require('./services/gallery-image.service');
+var galleria_1 = require('primeng/components/galleria/galleria');
 //Compoent Decorator
-var CSSGalleryComponent = (function () {
-    function CSSGalleryComponent(galleryService) {
+var GalleryComponent = (function () {
+    function GalleryComponent(galleryService) {
         this.galleryService = galleryService;
     }
-    CSSGalleryComponent.prototype.getImages = function (galleryId) {
+    GalleryComponent.prototype.getImages = function (galleryId) {
         this.images = this.galleryService.getImages(galleryId);
     };
-    CSSGalleryComponent.prototype.ngOnInit = function () {
+    GalleryComponent.prototype.ngOnInit = function () {
         this.getImages(this.galleryId);
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Number)
-    ], CSSGalleryComponent.prototype, "galleryId", void 0);
-    CSSGalleryComponent = __decorate([
+    ], GalleryComponent.prototype, "galleryId", void 0);
+    GalleryComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'css-carousel',
+            selector: 'gallery',
             providers: [gallery_image_service_1.GalleryImageService],
-            template: "\n\t\t<div class=\"carousel\">\n\t\t  <ul class=\"slides\">\n\t\t    <li *ngFor=\"let image of images\">\n\t\t     \t<img src=\"{{image.url}}\" alt=\"\">\n\t\t    </li>\n\t\t  </ul>\n\t\t</div>\n\t  ",
-            //todo use styleUrls  
-            //styleUrls: ['gallery.component.css']
-            styles: ["\n\t\t.carousel{\n\t\t    overflow:hidden;\n\t\t    width:100%;\n\t\t}\n\t\t.slides{\n\t\t    list-style:none;\n\t\t    position:relative;\n\t\t    width:500%; /* Number of panes * 100% */\n\t\t    overflow:hidden; /* Clear floats */\n\t\t        /* Slide effect Animations*/\n\t\t    -moz-animation:carousel 30s infinite;\n\t\t    -webkit-animation:carousel 30s infinite;\n\t\t    animation:carousel 30s infinite;\n\t\t}\n\t\t.slides > li{\n\t\t    position:relative;\n\t\t    float:left;\n\t\t    width: 20%; /* 100 / number of panes */\n\t\t}\n\t\t.carousel img{\n\t\t    display:block;\n\t\t    width:100%;\n\t\t    max-width:100%;\n\t\t}\n\n\t\t@keyframes carousel{\n\t\t    0%    { left:-1%; }\n\t\t    11%   { left:-1%; }\n\t\t    12.5% { left:-101%; }\n\t\t    23.5% { left:-101%; }\n\t\t    25%   { left:-205%; }\n\t\t    36%   { left:-205%; }\n\t\t    37.5% { left:-305%; }\n\t\t    48.5% { left:-305%; }\n\t\t    50%   { left:-405%; }\n\t\t    61%   { left:-405%; }\n\t\t    62.5% { left:-305%; }\n\t\t    73.5% { left:-305%; }\n\t\t    75%   { left:-205%; }\n\t\t    86%   { left:-205%; }\n\t\t    87.5% { left:-105%; }\n\t\t    98.5% { left:-105%; }\n\t\t    100%  { left:-5%; }\n\t\t}\n\t"],
+            directives: [galleria_1.Galleria],
+            template: "\n  \t<p-galleria [images]=\"images\" panelWidth=\"400\" panelHeight=\"300\" showCaption=\"true\"></p-galleria>\n  \t",
         }), 
         __metadata('design:paramtypes', [gallery_image_service_1.GalleryImageService])
-    ], CSSGalleryComponent);
-    return CSSGalleryComponent;
+    ], GalleryComponent);
+    return GalleryComponent;
 }());
-exports.CSSGalleryComponent = CSSGalleryComponent;
+exports.GalleryComponent = GalleryComponent;
 //# sourceMappingURL=gallery.component.js.map
