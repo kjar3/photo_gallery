@@ -5,17 +5,17 @@ import { GalleryImageService, Image } from './services/gallery-image.service'
 
  
 @Component({
-  selector: 'gallery',
-  providers: [GalleryImageService],
-  directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
-  templateUrl: 'app/gallery/gallery.component.html'
+	selector: 'gallery',
+  	providers: [GalleryImageService],
+  	directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
+  	templateUrl: 'app/gallery/gallery.component.html'
 })
 
 export class GalleryComponent {
 	@Input() galleryId: number;
 	images: Image[];
-  public myInterval:number = 1000;
-  public noWrapSlides:boolean = false;
+ 	myInterval:number = 1000;
+  	noWrapSlides:boolean = false;
  
   constructor(private galleryService: GalleryImageService) { }
 
