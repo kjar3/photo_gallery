@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
 import { CAROUSEL_DIRECTIVES } from 'ng2-bootstrap/components/carousel';
 import { GalleryImageService, Image } from './services/gallery-image.service'
@@ -17,10 +17,10 @@ export class GalleryComponent {
  	defaultInterval:number = 2;
   	noWrapSlides:boolean = false;
  
-  constructor(private galleryService: GalleryImageService) { }
+	constructor(private galleryImageService: GalleryImageService) { }
 
 	getImages(galleryId: number) {
-		this.images = this.galleryService.getImages(galleryId)
+		this.images = this.galleryImageService.getImages(galleryId)
 	}
 
 	ngOnInit() {

@@ -13,13 +13,13 @@ var common_1 = require('@angular/common');
 var carousel_1 = require('ng2-bootstrap/components/carousel');
 var gallery_image_service_1 = require('./services/gallery-image.service');
 var GalleryComponent = (function () {
-    function GalleryComponent(galleryService) {
-        this.galleryService = galleryService;
+    function GalleryComponent(galleryImageService) {
+        this.galleryImageService = galleryImageService;
         this.defaultInterval = 2;
         this.noWrapSlides = false;
     }
     GalleryComponent.prototype.getImages = function (galleryId) {
-        this.images = this.galleryService.getImages(galleryId);
+        this.images = this.galleryImageService.getImages(galleryId);
     };
     GalleryComponent.prototype.ngOnInit = function () {
         this.getImages(this.galleryId);

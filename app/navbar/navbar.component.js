@@ -16,15 +16,39 @@ var gallery_component_1 = require('../gallery/gallery.component');
 var NavBarComponent = (function () {
     function NavBarComponent(_galleryService) {
         this._galleryService = _galleryService;
-        this.galleries = _galleryService.getGalleries();
     }
+    NavBarComponent.prototype.getGalleries = function () {
+        this.galleries = this._galleryService.getGalleries();
+    };
+    NavBarComponent.prototype.ngOnInit = function () {
+        this.getGalleries();
+    };
+    NavBarComponent.prototype.selectTab = function (event) {
+        // need this for later
+    };
+    NavBarComponent.prototype.deselectTab = function (event) {
+        // might need this for later
+    };
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'gallery-nav',
             providers: [gallery_service_1.GalleryService],
             directives: [tabs_1.TAB_DIRECTIVES, common_1.CORE_DIRECTIVES, gallery_component_1.GalleryComponent],
-            template: "\n    <div class=\"nav-wrapper\">\n      <tabset justified=true>\n        <tab *ngFor=\"let gallery of galleries\" [heading]=\"gallery.name\"> \n          <div class=\"gallery-wrapper\">\n            <gallery [galleryId]=\"gallery.id\"></gallery>\n          </div>\n        </tab>\n      </tabset>\n    </div>\n\t\t",
-            styles: ["\n    .nav-wrapper {\n      background: #e0e2e4;\n      padding-top: 20px\n    }\n\n    .gallery-wrapper {\n      background: black;\n      border-style: solid;\n      border-color: black;\n      border-width: 50px 50px 50px 50px;\n    }\n\n\n  "]
+            templateUrl: 'app/navbar/navbar.component.html',
+            styles: ["\n    .nav-wrapper {\n      background: #e0e2e4;\n      padding-top: 20px\n    }\n\n    .gallery-wrapper {\n      background: black;\n      border-style: solid;\n      border-color: black;\n      border-width: 50px 50px 50px 50px;\n    }\n  "],
+            //this is not functional yet
+            animations: [
+                core_1.trigger('tabState', [
+                    core_1.state('false', core_1.style({
+                        backgroundColor: '#e0e2e4'
+                    })),
+                    core_1.state('true', core_1.style({
+                        backgroundColor: 'black'
+                    })),
+                    core_1.transition('false => true', core_1.animate('200ms ease-in')),
+                    core_1.transition('true => false', core_1.animate('200ms ease-out'))
+                ])
+            ]
         }), 
         __metadata('design:paramtypes', [gallery_service_1.GalleryService])
     ], NavBarComponent);
