@@ -15,7 +15,7 @@ var gallery_image_service_1 = require('./services/gallery-image.service');
 var GalleryComponent = (function () {
     function GalleryComponent(galleryService) {
         this.galleryService = galleryService;
-        this.defaultInterval = 2000;
+        this.defaultInterval = 2;
         this.noWrapSlides = false;
     }
     GalleryComponent.prototype.getImages = function (galleryId) {
