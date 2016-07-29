@@ -21,7 +21,7 @@ import { GalleryComponent } from '../gallery/gallery.component'
       border-color: black;
       border-width: 50px 50px 50px 50px;
     }
-  `]
+  `],
 
   //this is not functional yet
   animations: [
