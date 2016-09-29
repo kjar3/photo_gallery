@@ -9,10 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var tabs_1 = require('ng2-bootstrap/components/tabs');
 var gallery_service_1 = require('../gallery/services/gallery.service');
-var gallery_component_1 = require('../gallery/gallery.component');
 var NavBarComponent = (function () {
     function NavBarComponent(_galleryService) {
         this._galleryService = _galleryService;
@@ -24,19 +21,21 @@ var NavBarComponent = (function () {
         this.getGalleries();
     };
     NavBarComponent.prototype.selectTab = function (event) {
+        console.log('select', event);
         // need this for later
     };
     NavBarComponent.prototype.deselectTab = function (event) {
+        console.log('deselect', event);
         // might need this for later
     };
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'gallery-nav',
             providers: [gallery_service_1.GalleryService],
-            directives: [tabs_1.TAB_DIRECTIVES, common_1.CORE_DIRECTIVES, gallery_component_1.GalleryComponent],
             templateUrl: 'app/navbar/navbar.component.html',
             styles: ["\n    .nav-wrapper {\n      background: #e0e2e4;\n      padding-top: 20px\n    }\n\n    .gallery-wrapper {\n      background: black;\n      border-style: solid;\n      border-color: black;\n      border-width: 50px 50px 50px 50px;\n    }\n  "],
             //this is not functional yet
+            //@tabState="[active].toString()" //removed from <tab></tab>
             animations: [
                 core_1.trigger('tabState', [
                     core_1.state('false', core_1.style({

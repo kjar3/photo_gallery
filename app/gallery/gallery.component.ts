@@ -1,13 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { CORE_DIRECTIVES, FORM_DIRECTIVES } from '@angular/common';
-import { CAROUSEL_DIRECTIVES } from 'ng2-bootstrap/components/carousel';
 import { GalleryImageService, Image } from './services/gallery-image.service'
 
  
 @Component({
 	selector: 'gallery',
   	providers: [GalleryImageService],
-  	directives: [CAROUSEL_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
   	templateUrl: 'app/gallery/gallery.component.html'
 })
 

@@ -1,13 +1,11 @@
 import { Component, Input, trigger, state, style, transition, animate } from '@angular/core';
-import { CORE_DIRECTIVES } from '@angular/common';
-import { TAB_DIRECTIVES } from 'ng2-bootstrap/components/tabs';
+import { TabsModule } from 'ng2-bootstrap/components/tabs';
 import { GalleryService, Gallery } from '../gallery/services/gallery.service'
 import { GalleryComponent } from '../gallery/gallery.component'
 
 @Component({
   selector: 'gallery-nav',
   providers: [GalleryService],
-  directives: [TAB_DIRECTIVES, CORE_DIRECTIVES, GalleryComponent],
   templateUrl: 'app/navbar/navbar.component.html',
   styles: [`
     .nav-wrapper {
@@ -24,6 +22,8 @@ import { GalleryComponent } from '../gallery/gallery.component'
   `],
 
   //this is not functional yet
+
+  //@tabState="[active].toString()" //removed from <tab></tab>
   animations: [
   trigger('tabState', [
     state('false', style({
@@ -54,9 +54,11 @@ export class NavBarComponent {
     }
 
   selectTab(event: any) {
+    console.log('select', event)
     // need this for later
   }
   deselectTab(event: any) {
+    console.log('deselect', event)
     // might need this for later
   }
 }

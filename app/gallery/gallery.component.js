@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var carousel_1 = require('ng2-bootstrap/components/carousel');
 var gallery_image_service_1 = require('./services/gallery-image.service');
 var GalleryComponent = (function () {
     function GalleryComponent(galleryImageService) {
@@ -32,7 +30,6 @@ var GalleryComponent = (function () {
         core_1.Component({
             selector: 'gallery',
             providers: [gallery_image_service_1.GalleryImageService],
-            directives: [carousel_1.CAROUSEL_DIRECTIVES, common_1.CORE_DIRECTIVES, common_1.FORM_DIRECTIVES],
             templateUrl: 'app/gallery/gallery.component.html'
         }), 
         __metadata('design:paramtypes', [gallery_image_service_1.GalleryImageService])
