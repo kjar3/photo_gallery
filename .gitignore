@@ -1,3 +1,7 @@
+
+app/**/*.js
+app/**/*.map
+
 ### mac os stuff
 .DS_Store
 
