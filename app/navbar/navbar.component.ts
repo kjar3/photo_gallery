@@ -7,35 +7,23 @@ import { GalleryComponent } from '../gallery/gallery.component'
   selector: 'gallery-nav',
   providers: [GalleryService],
   templateUrl: 'app/navbar/navbar.component.html',
-  styles: [`
-    .nav-wrapper {
-      background: #e0e2e4;
-      padding-top: 20px
-    }
+  styleUrls: ['app/navbar/navbar.component.css']
 
-    .gallery-wrapper {
-      background: black;
-      border-style: solid;
-      border-color: black;
-      border-width: 50px 50px 50px 50px;
-    }
-  `],
-
-  //this is not functional yet
+  //WIP this is not functional yet
 
   //@tabState="[active].toString()" //removed from <tab></tab>
-  animations: [
-  trigger('tabState', [
-    state('false', style({
-      backgroundColor: '#e0e2e4'
-    })),
-    state('true', style({
-      backgroundColor: 'black'
-    })),
-    transition('false => true', animate('200ms ease-in')),
-    transition('true => false', animate('200ms ease-out'))
-    ])
-  ]
+  //animations: [
+  //trigger('tabState', [
+  //  state('false', style({
+  //    backgroundColor: '#e0e2e4'
+  //  })),
+  //  state('true', style({
+  //    backgroundColor: 'black'
+  //  })),
+  //  transition('false => true', animate('200ms ease-in')),
+  //  transition('true => false', animate('200ms ease-out'))
+  //  ])
+  //]
 
 })
 
