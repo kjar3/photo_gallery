@@ -54,11 +54,11 @@ export class NavBarComponent {
     }
 
   selectTab(event: any) {
-    console.log('select', event)
+    //console.log('select', event)
     // need this for later
   }
   deselectTab(event: any) {
-    console.log('deselect', event)
+    //console.log('deselect', event)
     // might need this for later
   }
 }

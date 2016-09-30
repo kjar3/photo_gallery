@@ -9,6 +9,7 @@
     'moment':                     'node_modules/moment/moment.js',
     'app':                        'app', // 'dist',
     '@angular':                   'node_modules/@angular',
+    '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
     'angular-in-memory-web-api': 'node_modules/angular-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs',
   };
