@@ -6,7 +6,7 @@
 (function(global) {
   // map tells the System loader where to look for things
   var map = {
-    'moment':                     'node_modules/moment/moment.js',
+    'moment':                     'node_modules/moment/moment.js', // import * as moment from 'moment'
     'app':                        'app', // 'dist',
     '@angular':                   'node_modules/@angular',
     '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js',
