@@ -1,15 +1,6 @@
-<div class="row" >
 
     <carousel [interval]="defaultInterval * 1000" [noWrap]="noWrapSlides">
-      <slide *ngFor="let image of images; let index=index"
-             [active]="image.active">
+      <slide *ngFor="let image of images; let index=index" [active]="image.active">
         <img [src]="image.url" style="margin:auto; height:75vh;">
- 
-        <div class="carousel-caption">
-          <h4>Slide {{index + 1}}</h4>
- 
-          <p>{{image.title}}</p>
-        </div>
       </slide>
     </carousel>
-  </div>
