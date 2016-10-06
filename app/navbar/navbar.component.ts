@@ -1,7 +1,7 @@
-import { Component, Input, OnInit trigger, state, style, transition, animate } from '@angular/core';
+import { Component, Input, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { TabsModule } from 'ng2-bootstrap/components/tabs';
-import { GalleryService, Gallery } from '../gallery/services/gallery.service'
-import { GalleryComponent } from '../gallery/gallery.component'
+import { GalleryService, Gallery } from '../gallery/services/gallery.service';
+import { GalleryComponent } from '../gallery/gallery.component';
 
 @Component({
   selector: 'gallery-nav',
@@ -31,7 +31,7 @@ export class NavBarComponent implements OnInit {
 	componentName: 'NavBarComponent';
 	galleries: Gallery[];
 
-	constructor(private _galleryService: GalleryService) { }
+	constructor(private _galleryService: GalleryService) { };
 
   getGalleries() {
     this.galleries = this._galleryService.getGalleries();
