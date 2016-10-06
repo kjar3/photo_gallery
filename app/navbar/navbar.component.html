@@ -1,5 +1,5 @@
 <div class="nav-wrapper">
-	<tabset justified=true>
+	<tabset>
 		<tab *ngFor="let gallery of galleries" [heading]="gallery.name" (select)="selectTab($event)" (deselect)="deselectTab($event)" >
 			<div class="gallery-wrapper">
 				<gallery [galleryId]="gallery.id"></gallery>
