@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GalleryImageService, Image } from './services/gallery-image.service'
 
  
@@ -8,7 +8,7 @@ import { GalleryImageService, Image } from './services/gallery-image.service'
   	templateUrl: 'app/gallery/gallery.component.html'
 })
 
-export class GalleryComponent {
+export class GalleryComponent implements OnInit {
 	@Input() galleryId: number;
 	images: Image[];
  	defaultInterval:number = 2;
