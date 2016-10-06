@@ -12,7 +12,7 @@ import { GalleryImageService, Image } from './services/gallery-image.service'
 export class GalleryComponent implements OnInit {
 	@Input() galleryId: number;
 	images: Image[];
- 	defaultInterval:number = 2;
+ 	defaultInterval:number = 0;
   	noWrapSlides:boolean = false;
  
 	constructor(private galleryImageService: GalleryImageService) { }
