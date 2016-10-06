@@ -1,48 +1,52 @@
-import { Component } from '@angular/core';
-import { CORE_DIRECTIVES } from '@angular/common';
-import { TAB_DIRECTIVES } from 'ng2-bootstrap/components/tabs';
-import { GalleryService, Gallery } from '../gallery/services/gallery.service'
-import { CSSGalleryComponent } from '../gallery/gallery.component'
-
+import { Component, Input, OnInit, trigger, state, style, transition, animate } from '@angular/core';
+import { TabsModule } from 'ng2-bootstrap/components/tabs';
+import { GalleryService, Gallery } from '../gallery/services/gallery.service';
+import { GalleryComponent } from '../gallery/gallery.component';
 
 @Component({
   selector: 'gallery-nav',
   providers: [GalleryService],
-  directives: [TAB_DIRECTIVES, CORE_DIRECTIVES, CSSGalleryComponent],
-  template: `
-    <div class="nav-wrapper">
-      <tabset justified=true>
-        <tab *ngFor="let gallery of galleries" [heading]="gallery.name"> 
-          <div class="gallery-wrapper">
-            <css-carousel [galleryId]="gallery.id"></css-carousel>
-          </div>
-        </tab>
-      </tabset>
-    </div>
-		`,
-  styles: [`
-    .nav-wrapper {
-      background: lightgrey;
-      margin-top: 10px
-    }
+  templateUrl: 'app/navbar/navbar.component.html',
+  styleUrls: ['app/navbar/navbar.component.css']
 
-    .gallery-wrapper {
-      background: black;
-      border-style: solid;
-      border-color: black;
-      border-width: 60px 60px 60px 60px;
-    }
+  //WIP this is not functional yet
 
-
-  `]
+  //@tabState="[active].toString()" //removed from <tab></tab>
+  //animations: [
+  //trigger('tabState', [
+  //  state('false', style({
+  //    backgroundColor: '#e0e2e4'
+  //  })),
+  //  state('true', style({
+  //    backgroundColor: 'black'
+  //  })),
+  //  transition('false => true', animate('200ms ease-in')),
+  //  transition('true => false', animate('200ms ease-out'))
+  //  ])
+  //]
 
 })
 
-export class NavBarComponent {
+export class NavBarComponent implements OnInit {
 	componentName: 'NavBarComponent';
 	galleries: Gallery[];
 
-	constructor(private _galleryService: GalleryService) {
-		this.galleries = _galleryService.getGalleries();
-	}
+	constructor(private _galleryService: GalleryService) { };
+
+  getGalleries() {
+    this.galleries = this._galleryService.getGalleries();
+  }
+
+  ngOnInit() {
+    this.getGalleries();
+    }
+
+  selectTab(event: any) {
+    //console.log('select', event)
+    // need this for later
+  }
+  deselectTab(event: any) {
+    //console.log('deselect', event)
+    // might need this for later
+  }
 }

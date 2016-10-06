@@ -1,0 +1,11 @@
+.nav-wrapper {
+    background: #e0e2e4;
+    padding-top: 20px
+}
+
+.gallery-wrapper {
+    background: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 50px 50px 50px 50px;
+}

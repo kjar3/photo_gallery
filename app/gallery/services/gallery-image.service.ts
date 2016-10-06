@@ -34,11 +34,13 @@ export class GalleryImageService {
 				{ "title": "C5", "url": "gallery_images/C5.jpg" }
 			],
 		4: [
-                { "title": "First Cat", "url": "http://placekitten.com/400/300" },
-                { "title": "D2", "url": "http://placekitten.com/400/302" },
-                { "title": "D3", "url": "http://placekitten.com/400/303" },
-                { "title": "A4", "url": "http://placekitten.com/400/304" },
-                { "title": "D5", "url": "http://placekitten.com/400/305" }
+
+				{ "title": "First Cat", "url": "http://placekitten.com/400/300" },
+				{ "title": "D2", "url": "http://placekitten.com/300/200" },
+				{ "title": "D3", "url": "http://placekitten.com/400/303" },
+				{ "title": "A4", "url": "http://placekitten.com/600/400" },
+				{ "title": "D5", "url": "http://placekitten.com/420/320" }
+
 			]
 		};
 	}
