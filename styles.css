@@ -1,5 +1,6 @@
 .nav-link {
 	font-size: 15px;
+	color: #3e3e3e !important;
 }
 
 .nav-tabs>li>a {
@@ -12,7 +13,7 @@
 }
 
 .nav-tabs>.active>a {
-	color: lightgray !important;
+	color: #b9b9b9 !important;
 	border-bottom-color: black !important;
 	background: black !important;
 }
